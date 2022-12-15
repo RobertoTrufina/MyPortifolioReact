@@ -1,0 +1,24 @@
+.btn-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid green;
+    border-radius: 4px;
+    width: 12em;
+    transition: 0.3s;
+}
+
+.btn-form:hover {
+    background: green;
+}
+
+.link-btn-form {
+    text-decoration: none;
+    color: #fff;
+}
+
+.link-btn-form:hover {
+    text-decoration: none;
+    color: #fff;
+}

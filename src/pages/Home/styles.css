@@ -1,0 +1,170 @@
+body {
+    background: #000;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    position: fixed;
+    gap: 2em;
+}
+
+nav ul li a {
+    color: green;
+    border: none;   
+    border-radius: 4px; 
+    padding: 5px;
+    width:12em;
+    text-align: center;
+    text-decoration: none;
+}
+nav ul li a:hover {
+    color: #fff;
+    background-color: rgb(12, 212, 12);
+    border-radius: 5px;
+
+
+
+}
+
+li {
+    font-family:Verdana, Geneva, Tahoma, sans-serif    
+}
+
+.container {
+    width: 60%;
+    margin: auto;
+    padding-top: 1em;
+}
+
+.profile {
+    color: #fff;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    margin-top: 3em;
+}
+
+h1 {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2em;
+}
+
+h2 {
+    color: #fff;
+
+}
+
+.profile img {
+    margin-left: 3em;
+    width: 200px;
+    height: 200px;
+    border-radius: 120px;
+    margin-left: 60%;
+
+}
+
+.container h2 {
+    font-size: 40px;
+}
+
+#projects {
+    margin-bottom: 11em;
+}
+
+.down-arrow {
+    text-align: center;
+    width: 100%;
+    font-size: 50px;
+    margin-top: 30px;
+    color: #fff;
+
+}
+
+.img-skills img {
+    width: 50px;
+    padding: 50px;
+    transition: 0.5s;
+}
+
+.box-cards {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    margin-bottom: 3em;
+}
+
+/* Formulário */
+
+.container-form {
+    display: flex;
+    justify-content: center;
+    line-height: 3em;
+
+}
+
+#contacts {
+    margin-bottom: 5em;
+    
+}
+
+form {
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;
+    height: 100%;
+
+}
+
+.box-form input {
+    color: #666;
+    font-size: 17px;
+    padding: 5px;
+    background: none;
+    border: none;
+    width: 20em;
+    border-bottom: 1px solid #666;
+    outline: none;
+    margin: 2em;
+    margin-bottom: 1em;
+}
+
+.box-form input:hover {
+    border-bottom: 1px solid green;
+    color: #fff;
+}
+
+form textarea {
+    color: #fff;
+    font-size: 17px;
+    color: #666;
+    padding: 10px;
+    margin-top: 1em;
+    width: 70%;
+    height: 10em;
+    background: none;
+    border: none;
+    outline: 1px solid #666;
+}
+
+form textarea:hover {
+    outline: 1px solid green;
+    color: #fff;
+}
+
+.btn_form {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}

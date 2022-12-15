@@ -1,0 +1,24 @@
+.btn-contact {
+    border: 1px solid green;   
+    border-radius: 4px; 
+    padding: 20px;
+    width:12em;
+    text-align: center;
+}
+
+.btn-contact:hover {
+    background: green;
+    transition: 0.3s;
+
+}
+
+.link-btn-contact{
+    text-decoration: none;
+    color: #fff;
+}
+
+.link-btn-contact:hover{
+    text-decoration: none;
+    color: #fff;
+}
+
