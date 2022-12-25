@@ -1,5 +1,12 @@
+:root {
+    --white-text: #fff;
+    --bg-black: #000;
+    --green-text: #008000;
+    --color-text: #666;
+}
+
 body {
-    background: #000;
+    background: var(--bg-black);
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
     width: 100%;
@@ -9,6 +16,7 @@ html {
     scroll-behavior: smooth;
 }
 
+
 nav ul {
     display: flex;
     list-style: none;
@@ -17,25 +25,23 @@ nav ul {
 }
 
 nav ul li a {
-    color: green;
-    border: none;   
-    border-radius: 4px; 
-    padding: 5px;
-    width:12em;
+    color: var(--white-text);
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    width: 12em;
     text-align: center;
     text-decoration: none;
 }
+
 nav ul li a:hover {
-    color: #fff;
-    background-color: rgb(12, 212, 12);
+    color: var(--white-text);
+    background-color: var(--green-text);
     border-radius: 5px;
-
-
-
 }
 
 li {
-    font-family:Verdana, Geneva, Tahoma, sans-serif    
+    font-family: Verdana, Geneva, Tahoma, sans-serif
 }
 
 .container {
@@ -45,22 +51,41 @@ li {
 }
 
 .profile {
-    color: #fff;
+    color: var(--white-text);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     margin-top: 3em;
 }
 
+.p-profile {
+    color: var(--white-text);
+}
+
+
+strong {
+    color: var(--green-text);
+}
+
+.about-me  {
+    color: var(--color-text);
+    margin-top: -40px;
+    text-align: center;
+}
+
+p {
+    color: var(--color-text);
+}
+
 h1 {
-    color: #fff;
+    color: var(--white-text);
     display: flex;
     justify-content: center;
     margin-bottom: 2em;
 }
 
 h2 {
-    color: #fff;
+    color: var(--white-text);
 
 }
 
@@ -70,7 +95,6 @@ h2 {
     height: 200px;
     border-radius: 120px;
     margin-left: 60%;
-
 }
 
 .container h2 {
@@ -86,8 +110,7 @@ h2 {
     width: 100%;
     font-size: 50px;
     margin-top: 30px;
-    color: #fff;
-
+    color: var(--white-text);
 }
 
 .img-skills img {
@@ -97,9 +120,6 @@ h2 {
 }
 
 .box-cards {
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
     display: grid;
     grid-template-columns: repeat(3, 2fr);
     margin-bottom: 3em;
@@ -111,12 +131,10 @@ h2 {
     display: flex;
     justify-content: center;
     line-height: 3em;
-
 }
 
 #contacts {
     margin-bottom: 5em;
-    
 }
 
 form {
@@ -124,43 +142,42 @@ form {
     width: 100%;
     text-align: center;
     height: 100%;
-
 }
 
 .box-form input {
-    color: #666;
+    color: var(--color-text);
     font-size: 17px;
     padding: 5px;
     background: none;
     border: none;
     width: 20em;
-    border-bottom: 1px solid #666;
+    border-bottom: 1px solid var(--color-text);
     outline: none;
     margin: 2em;
     margin-bottom: 1em;
 }
 
 .box-form input:hover {
-    border-bottom: 1px solid green;
-    color: #fff;
+    border-bottom: 1px solid var(--green-text);
+    color: var(--white-text);
 }
 
 form textarea {
-    color: #fff;
+    color: var(--white-text);
     font-size: 17px;
-    color: #666;
+    color: var(--color-text);
     padding: 10px;
     margin-top: 1em;
     width: 70%;
     height: 10em;
     background: none;
     border: none;
-    outline: 1px solid #666;
+    outline: 1px solid var(--color-text);
 }
 
 form textarea:hover {
-    outline: 1px solid green;
-    color: #fff;
+    outline: 1px solid var(--green-text);
+    color: var(--white-text);
 }
 
 .btn_form {

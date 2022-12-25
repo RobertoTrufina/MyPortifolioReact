@@ -1,24 +1,31 @@
+:root {
+    --white-text: #fff;
+    --bg-black: #000;
+    --green-text: #008000;
+    --color-text: #666;
+}
+
 .btn-form {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
-    border: 1px solid green;
+    border: 1px solid var(--green-text);
     border-radius: 4px;
     width: 12em;
     transition: 0.3s;
 }
 
 .btn-form:hover {
-    background: green;
+    background: var(--green-text);
 }
 
 .link-btn-form {
     text-decoration: none;
-    color: #fff;
+    color: var(--green-text);
 }
 
 .link-btn-form:hover {
     text-decoration: none;
-    color: #fff;
+    color: var(--white-text);
 }

@@ -19,7 +19,6 @@ import './styles.css'
 export default function Home() {
     return (
         <>
-
             <nav>
                 <ul>
                     <li><a href="#about">about</a></li>
@@ -30,35 +29,26 @@ export default function Home() {
 
             <main className='container'>
                 <section id='about'>
-
                     <div className='profile'>
                         <h2>
-                            <p>Hello, I am <strong style={{ color: 'green' }}>Roberto</strong></p>
-                            <p>Front End Developer</p>
+                            <p className='p-profile'>Hello, I am <strong>Roberto</strong></p>
+                            <p className='p-profile'>Front End Developer</p>
                         </h2>
                         <img src="https://avatars.githubusercontent.com/u/100736661?v=4" />
                     </div>
 
                     <h1>About me</h1>
-
-                    <p style={{ color: '#666', marginTop: '-40px', textAlign: 'center' }}>
+                    <p className='about-me'>
                         I currently live in Caucaia-Ce, I love technology and have a lot of curiosity and interest in the area of ​​development to build and solve web problems.
                     </p>
-
                     <ButtonContact />
-
 
                     <div className='down-arrow'>
                     </div>
 
+                    <h2><strong>Skills</strong> and tools</h2>
 
-                    <h2>
-                        <strong style={{ color: 'green', fontWeight: 'bold' }}>Skills</strong> and tools
-                    </h2>
-
-                    <p style={{ color: '#666', }}>
-                        For a more detailed overviw, please fell free to check the tools that were used on a per-project basis.
-                    </p>
+                    <p>For a more detailed overviw, please fell free to check the tools that were used on a per-project basis.</p>
 
                     <div className='img-skills'>
                         <img src={html} />
@@ -78,9 +68,9 @@ export default function Home() {
 
                     <div className='box-some-projects'>
                         <h2 className='some-projects'>
-                            Some <strong style={{ color: 'green', fontWeight: 'bold' }}>Projects</strong>
+                            Some <strong>Projects</strong>
                         </h2>
-                        <p style={{ color: '#666', fontWeight: 'normal' }}>
+                        <p>
                             Take a look at what we´ve created and be inspired  by.
                         </p>
                     </div>
@@ -149,8 +139,9 @@ export default function Home() {
                     </div>
                 </section>
 
-
             </main>
+
+
 
 
         </>
