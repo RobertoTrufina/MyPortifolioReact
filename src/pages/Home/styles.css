@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 :root {
     --white-text: #fff;
     --bg-black: #000;
@@ -6,14 +10,18 @@
 }
 
 body {
+    margin: 0px;
+    padding: 0px;
     background: var(--bg-black);
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
     width: 100%;
+    align-items: center;
 }
 
 html {
     scroll-behavior: smooth;
+
 }
 
 
@@ -22,6 +30,7 @@ nav ul {
     list-style: none;
     position: fixed;
     gap: 2em;
+    width: auto;
 }
 
 nav ul li a {
@@ -41,11 +50,21 @@ nav ul li a:hover {
 }
 
 li {
-    font-family: Verdana, Geneva, Tahoma, sans-serif
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+label {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    font-size: 15px;
+    color: var(--white-text);
+    margin-left: 120%;
 }
 
 .container {
-    width: 60%;
+    width: 70%;
+    height: 105em;
     margin: auto;
     padding-top: 1em;
 }
@@ -55,6 +74,8 @@ li {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
+    place-items: center;
+    justify-content: center;
     margin-top: 3em;
 }
 
@@ -62,12 +83,11 @@ li {
     color: var(--white-text);
 }
 
-
 strong {
     color: var(--green-text);
 }
 
-.about-me  {
+.about-me {
     color: var(--color-text);
     margin-top: -40px;
     text-align: center;
@@ -90,11 +110,9 @@ h2 {
 }
 
 .profile img {
-    margin-left: 3em;
     width: 200px;
     height: 200px;
     border-radius: 120px;
-    margin-left: 60%;
 }
 
 .container h2 {
@@ -102,7 +120,7 @@ h2 {
 }
 
 #projects {
-    margin-bottom: 11em;
+    margin-bottom: 3em;
 }
 
 .down-arrow {
@@ -113,16 +131,21 @@ h2 {
     color: var(--white-text);
 }
 
+.img-skills {
+    display: flex ;
+    justify-content: space-between
+
+}
+
 .img-skills img {
-    width: 50px;
-    padding: 50px;
-    transition: 0.5s;
+    width: 15%;
+    padding: 10px;
 }
 
 .box-cards {
     display: grid;
     grid-template-columns: repeat(3, 2fr);
-    margin-bottom: 3em;
+
 }
 
 /* Formulário */
@@ -131,10 +154,6 @@ h2 {
     display: flex;
     justify-content: center;
     line-height: 3em;
-}
-
-#contacts {
-    margin-bottom: 5em;
 }
 
 form {
@@ -168,7 +187,7 @@ form textarea {
     color: var(--color-text);
     padding: 10px;
     margin-top: 1em;
-    width: 70%;
+    width: 80%;
     height: 10em;
     background: none;
     border: none;
@@ -184,4 +203,48 @@ form textarea:hover {
     display: flex;
     justify-content: center;
     width: 100%;
+}
+
+@media (max-width: 700px) {
+
+    .global {
+        max-width: 700px;
+
+    }
+    .container {
+        width: 90%;
+        height: 105em;
+        margin: auto;
+    }
+
+    h2 {
+        color: var(--white-text);
+        text-align: center;
+    }
+
+    .profile {
+        color: var(--white-text);
+        display: block;
+        margin-top: 5em;
+    }
+
+    .profile img {
+        width: 200px;
+        height: 200px;
+        border-radius: 120px;
+        margin-left: 33%;
+    }
+
+    .img-skills img {
+        width: 15%;
+        padding: 10px;
+    }
+
+    .box-cards {
+        display: block;
+
+        
+
+    }
+
 }

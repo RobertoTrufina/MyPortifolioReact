@@ -20,7 +20,7 @@ export default function CardCrud() {
             </div>
             <div className='wrap-preview'>
                 <div className='btn-github'>
-                    <a href="https://github.com/RobertoTrufina/crud-react-hooks">
+                    <a href="https://github.com/RobertoTrufina/crud-react-hooks" target="_blank" >
                         <img src={github} alt="ToDoList" />
                     </a>
                 </div>

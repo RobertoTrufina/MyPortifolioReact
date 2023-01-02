@@ -20,7 +20,7 @@ export default function CardLogin() {
             </div>
             <div className='wrap-preview'>
                 <div className='btn-github'>
-                    <a href="https://github.com/RobertoTrufina/SystemLoginReact">
+                    <a href="https://github.com/RobertoTrufina/SystemLoginReact" target="_blank">
                         <img src={github} alt="login" />
                     </a>
                 </div>

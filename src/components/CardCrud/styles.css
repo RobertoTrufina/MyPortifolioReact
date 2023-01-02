@@ -21,14 +21,6 @@ span {
     font-size: 170px;
 }
 
-.box-projectskill img {
-    height: auto;
-    width: 3em;
-    padding: 3px;
-    margin-top: 2em;
-    margin-bottom: 1em;
-}
-
 .wrap-preview {
     display: flex;
     justify-content: center;

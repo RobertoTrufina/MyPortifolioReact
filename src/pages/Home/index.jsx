@@ -1,6 +1,5 @@
 import React from 'react'
 
-import ButtonContact from '../../components/ButtonContact'
 
 import bootstrap from '../../imgs/bootstrap.png'
 import css from '../../imgs/css.png'
@@ -17,13 +16,18 @@ import CardLogin from './../../components/CardLogin/index'
 import './styles.css'
 
 export default function Home() {
+
     return (
-        <>
+        <div className='global'>
             <nav>
                 <ul>
                     <li><a href="#about">about</a></li>
                     <li><a href="#projects">projects</a></li>
                     <li><a href="#contacts">contacts</a></li>
+                    <li></li>
+                    <label htmlFor="switch">
+                        <input type="checkbox" id="switch" /> Light Mode
+                    </label>
                 </ul>
             </nav>
 
@@ -41,7 +45,6 @@ export default function Home() {
                     <p className='about-me'>
                         I currently live in Caucaia-Ce, I love technology and have a lot of curiosity and interest in the area of ​​development to build and solve web problems.
                     </p>
-                    <ButtonContact />
 
                     <div className='down-arrow'>
                     </div>
@@ -79,17 +82,16 @@ export default function Home() {
                         <CardCrud />
                         <CardTodoList />
                     </div>
+                <div className='down-arrow'>
+                    <BsChevronDoubleDown />
+                </div>
                 </section>
 
                 <section id="contacts">
-                    <div className='down-arrow'>
-                        <BsChevronDoubleDown />
-                    </div>
-
                     <h2>
-                        My <strong style={{ color: 'green', }}>Contacts</strong>
+                        My <strong>Contacts</strong>
                     </h2>
-                    <p style={{ color: '#666' }}>
+                    <p>
                         Get in touch
                         either by email or through may social media.
                     </p>
@@ -127,24 +129,14 @@ export default function Home() {
                                     />
                                 </div>
                             </div>
-
                             <textarea placeholder='Message'></textarea>
-
                         </form>
-
                     </div>
-
                     <div className='btn_form'>
                         <ButtonForm />
                     </div>
                 </section>
-
             </main>
-
-
-
-
-        </>
-
+        </div>
     )
 }

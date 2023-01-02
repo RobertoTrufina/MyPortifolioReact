@@ -1,3 +1,11 @@
+:root {
+    --white-text: #fff;
+    --bg-black: #000;
+    --green-text: #008000;
+    --color-text: #666;
+}
+
+
 .content-projectskill {
     margin-top: 3em;
     background-color: rgba(102, 102, 102, 0.158);
@@ -6,7 +14,7 @@
     padding: 1em;
     text-align: center;
     border-radius: 8px;
-    box-shadow: 5px 4px 0px 0px rgb(29, 28, 28);    
+    box-shadow: 5px 4px 0px 0px rgb(29, 28, 28);
     transition: 0.3s;
 }
 
@@ -21,17 +29,15 @@
     box-shadow: 5px 4px 0px 0px green;
 }
 
-
-
 span {
     font-size: 17px;
-    color: #fff;
+    color: var(--white-text);
 
 }
 
 .box-projectskill img {
     height: auto;
-    width: 3em;
+    width: 30%;
     padding: 3px;
     margin-top: 2em;
     margin-bottom: 1em;
@@ -42,16 +48,14 @@ span {
     display: flex;
     justify-content: center;
     padding: 5px;
-    margin-top: 20px;
-    gap: 12px;
+    gap: 15px;
 }
 
 .btn-github {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: solid 1px green;
-    width: 10em;
+    border: solid 1px var(--green-text);
     height: 50px;
     border-radius: 5px;
     transition: 0.2s;
@@ -59,29 +63,43 @@ span {
 }
 
 .btn-github:hover {
-    background-color: green;
-}
-
-.btn-github img {
-    height: auto;
-    width: 4em;
+    background-color: var(--green-text);
 }
 
 .btn-preview {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: solid 1px green;
+    border: solid 1px var(--green-text);
     width: 10em;
     height: 50px;
     border-radius: 5px;
     transition: 0.2s;
     cursor: pointer;
-    color: #fff;
+}
+
+.btn-preview:hover {
+    background-color: var(--green-text);
+}
+
+.btn-github img {
+    display: flex;
+    width: 3.5em;
+}
+
+.btn-preview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px var(--green-text);
+    height: 50px;
+    border-radius: 5px;
+    transition: 0.2s;
+    cursor: pointer;
+    color: var(--white-text);
 
 }
 
 .btn-preview:hover {
-    background-color: green;
+    background-color: var(--green-text);
 }
-

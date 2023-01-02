@@ -20,7 +20,7 @@ export default function CardTodoList() {
             </div>
             <div className='wrap-preview'>
                 <div className='btn-github'>
-                    <a href="https://github.com/RobertoTrufina/TodoListReact">
+                    <a href="https://github.com/RobertoTrufina/TodoListReact" target="_blank">
                         <img src={github} alt="ToDoList" />
                     </a>
                 </div>
