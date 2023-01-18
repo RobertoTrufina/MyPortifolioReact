@@ -5,10 +5,10 @@
 
 :root {
     --white-text: #fff;
-    --bg-black: #000;
+    --bg-black: #111;
     --green-text: #008000;
     --color-text: #666;
-    --bg-header: #222;
+    --bg-header: #444;
     --btn-hover: #055207;
 }
 
@@ -23,13 +23,12 @@ html {
 }
 
 .content-header {
-    width: 99%;
-    padding: 5px;
+    width: 100%;
     position: fixed;
 
     background-color: var(--bg-header);
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-around;
 
 
 }
@@ -37,9 +36,9 @@ html {
 .btn-header {
     font-size: 17px;
     background-color: transparent;
-    padding: 8px 20px;
+    padding: 8px 70px;
     border: transparent;
-    border-radius: 5px;
+    border-radius: 15px;
     transition: 0.4s;
     cursor: pointer;
 }
