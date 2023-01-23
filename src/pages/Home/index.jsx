@@ -1,6 +1,9 @@
-import React from 'react'
+import emailjs from '@emailjs/browser'
+import React, { useState } from 'react'
+import Menu from '../../components/Menu'
 
 import bootstrap from '../../imgs/bootstrap.png'
+import contacts from '../../imgs/contacts.svg'
 import css from '../../imgs/css.png'
 import facebook from '../../imgs/facebook.svg'
 import github from '../../imgs/github.svg'
@@ -16,23 +19,40 @@ import Cards from '../../components/Cards/index'
 import './styles.css'
 
 export default function Home() {
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+    const [message, setMessage] = useState('')
+
+    function sendEmail(e) {
+        e.prevenDefault
+
+        if (name === '' || email === '' || message === '') {
+            alert('Preencha todos o campos')
+            return
+        }
+
+        const templateParams = {
+            from_name: name,
+            message: message,
+            email: email
+        }
+
+        emailjs.send('service_m4ghbpp', 'template_v84td9l', templateParams, 'JcBqesGIN97DfwIjn')
+
+            .then((response) => {
+                console.log("Email Enviado", response.status, response.text)
+                alert('Email enviado com sucesso!')
+                setName('')
+                setEmail('')
+                setMessage('')
+            }, (err) => {
+                console.log('ERRO: ', err)
+            })
+    }
 
     return (
-        <div className='global'>
-            <header className='content-header'>
-                <nav className='btn'>
-                    <button className='btn-header'>
-                        <a href="#about">about</a>
-                    </button>
-                    <button className='btn-header'>
-                        <a href="#projects">projects</a>
-                    </button>
-                    <button className='btn-header'>
-                        <a href="#contacts">contacts</a>
-                    </button>
-                </nav>
-            </header>
-
+        <>
+            <Menu />
             <main className='container' id='about'>
                 <section >
                     <div className='profile'>
@@ -48,9 +68,6 @@ export default function Home() {
                         I currently live in Caucaia-Ce, I love technology and I have a lot of curiosity and interest in the development area to create projects and solve problems.
                     </p>
 
-                    <div className='down-arrow'>
-                    </div>
-
                     <h2><strong>Skills</strong> and tools</h2>
                     <br />
                     <p>For a more detailed overviw, please fell free to check the tools that were used on a per-project basis.</p>
@@ -63,7 +80,6 @@ export default function Home() {
                         <img src={bootstrap} />
                     </div>
                 </section>
-
                 <section id="projects">
                     <div className='down-arrow'>
                         <BsChevronDoubleDown />
@@ -95,34 +111,55 @@ export default function Home() {
                         Get in touch
                         either by email or through may social media.
                     </p>
-                    <form>
-                        <label>Nome</label>
-                        <input type="text" placeholder='Digite seu nome' />
-                        <label>E-mail</label>
-                        <input type="email" placeholder='Digite seu e-mail' />
-                        <label>Assunto</label>
-                        <textarea name="" id="" cols="30" rows="7" placeholder='Digite sua mensagem...' className='form-textarea'></textarea>
-                        <button type='submit' className='btn-form'>Enviar</button>
+                    <div className='svg-contacts'>
+                        <form onSubmit={sendEmail}>
+                            <label>Nome</label>
+                            <input
+                                type="text"
+                                placeholder='Digite seu nome'
+                                onChange={(e) => setName(e.target.value)}
+                                value={name}
+                            />
+                            <label>E-mail</label>
+                            <input
+                                type="email"
+                                placeholder='Digite seu e-mail'
+                                onChange={(e) => setEmail(e.target.value)}
+                                value={email}
+                            />
+                            <label>Assunto</label>
+                            <textarea
+                                className='form-textarea'
+                                name="" id=""
+                                cols="30"
+                                rows="7"
+                                placeholder='Digite sua mensagem...'
+                                onChange={(e) => setMessage(e.target.value)}
+                                value={message}
+                            />
 
-                        <div id='grid-contacts'>
-                            <a href="https://www.linkedin.com/in/roberto-pinto-3a747522a/" target="_blank">
-                                <img src={linkedin} />
-                            </a>
-                            <a href="http://wa.me/message/JSSNPVEDUAYJP1" target="_blank">
-                                <img src={whatsapp} />
-                            </a>
-                            <a href="https://github.com/RobertoTrufina" target="_blank">
-                                <img src={github} />
-                            </a>
-                            <a href="https://www.facebook.com/profile.php?id=100074199661890" target="_blank">
-                                <img src={facebook} />
-                            </a>
-                        </div>
-                    </form>
+                            <button className='btn-form'>Enviar</button>
 
+                            <div id='grid-contacts'>
+                                <a href="https://www.linkedin.com/in/roberto-pinto-3a747522a/" target="_blank">
+                                    <img src={linkedin} />
+                                </a>
+                                <a href="http://wa.me/message/JSSNPVEDUAYJP1" target="_blank">
+                                    <img src={whatsapp} />
+                                </a>
+                                <a href="https://github.com/RobertoTrufina" target="_blank">
+                                    <img src={github} />
+                                </a>
+                                <a href="https://www.facebook.com/profile.php?id=100074199661890" target="_blank">
+                                    <img src={facebook} />
+                                </a>
+                            </div>
+                        </form>
+                        <img src={contacts} />
+                    </div>
 
                 </section>
             </main>
-        </div>
+        </>
     )
 }

@@ -64,6 +64,7 @@ span {
     justify-content: center;
     align-items: center;
     border: solid 1px var(--green-text);
+    width: 10em;
     height: 50px;
     border-radius: 5px;
     transition: 0.2s;
@@ -72,6 +73,11 @@ span {
 
 .btn-github:hover {
     background-color: var(--green-text);
+}
+
+.btn-github img {
+    display: flex;
+    width: 2.5em;
 }
 
 .btn-preview {
@@ -84,33 +90,18 @@ span {
     border-radius: 5px;
     transition: 0.2s;
     cursor: pointer;
-}
-
-.btn-preview:hover {
-    background-color: var(--green-text);
-}
-
-.btn-github img {
-    display: flex;
-    width: 3.5em;
-}
-
-.btn-preview {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: solid 1px var(--green-text);
-    height: 50px;
-    border-radius: 5px;
-    transition: 0.2s;
-    cursor: pointer;
     color: var(--white-text);
-
 }
 
 .btn-preview:hover {
     background-color: var(--green-text);
 }
+
+a{
+    text-decoration: none;
+    color: var(--white-text);
+}
+
 
 @media (max-width: 700px) {
     .container-projectskill {

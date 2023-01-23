@@ -1,7 +1,7 @@
 import React from 'react'
 
 import css from '../../imgs/css.png'
-import github from '../../imgs/github.png'
+import github from '../../imgs/github.svg'
 import html from '../../imgs/html.png'
 import react from '../../imgs/react.png'
 
@@ -9,7 +9,8 @@ import './styles.css'
 
 export default function Cards() {
     return (
-        <div className='container-projectskill'>  
+        
+        <div className='container-projectskill'>
             <div className='content-projectskill'>
                 <div className='box-projectskill'>
                     <span>Crud</span>
@@ -26,7 +27,10 @@ export default function Cards() {
                         </a>
                     </div>
                     <div className='btn-preview'>
-                        <h6>Preview</h6>
+                 
+                        <a href="https://inquisitive-liger-8afaee.netlify.app" target="_blank">
+                            <h6>Preview</h6>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -51,7 +55,7 @@ export default function Cards() {
                     </div>
                 </div>
             </div>
-            
+
             <div className='content-projectskill'>
                 <div className='box-projectskill'>
                     <span>To do List</span>

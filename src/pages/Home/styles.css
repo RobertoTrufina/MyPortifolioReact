@@ -5,10 +5,10 @@
 
 :root {
     --white-text: #fff;
-    --bg-black: #111;
+    --bg-black: #18191a;
     --green-text: #008000;
     --color-text: #666;
-    --bg-header: #444;
+    --bg-header: #4B4C4E;
     --btn-hover: #055207;
 }
 
@@ -20,36 +20,6 @@ body {
 
 html {
     scroll-behavior: smooth;
-}
-
-.content-header {
-    width: 100%;
-    position: fixed;
-
-    background-color: var(--bg-header);
-    display: flex;
-    justify-content: space-around;
-
-
-}
-
-.btn-header {
-    font-size: 17px;
-    background-color: transparent;
-    padding: 8px 70px;
-    border: transparent;
-    border-radius: 15px;
-    transition: 0.4s;
-    cursor: pointer;
-}
-
-.btn-header:hover {
-    background-color: #333;
-}
-
-.btn-header a {
-    text-decoration: none;
-    color: var(--white-text);
 }
 
 .container {
@@ -159,7 +129,7 @@ form input {
     display: block;
     line-height: 20px;
 
-    width: 50%;
+    width: 80%;
     font-size: 17px;
     border: none;
     background-color: transparent;
@@ -182,7 +152,7 @@ form input:hover {
     display: block;
 
     font-size: 17px;
-    width: 48%;
+    width: 77%;
     color: var(--bg-header);
     padding: 8px;
     border: none;
@@ -193,7 +163,7 @@ form input:hover {
 
 .btn-form {
     margin-top: 20px;
-    width: 50%;
+    width: 80%;
     height: 40px;
     border-radius: 5px;
     border: solid 1px var(--green-text);
@@ -214,7 +184,13 @@ form input:hover {
     justify-content: space-between;
     align-items: center;
     margin-top: 10px;
-    width: 50%;
+    width: 80%;
+}
+
+.svg-contacts {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 
