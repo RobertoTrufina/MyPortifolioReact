@@ -7,13 +7,9 @@
 
 .container-projectskill {
     display: flex;
-    justify-content: center;
-    gap: 2em;
-
-    width: 70%;
-    height: auto;
-    margin: auto;
+    justify-content: space-between;
     padding-top: 1em;
+    gap: 2rem;
 }
 
 .content-projectskill {
@@ -97,15 +93,17 @@ span {
     background-color: var(--green-text);
 }
 
-a{
+a {
     text-decoration: none;
     color: var(--white-text);
 }
 
 
-@media (max-width: 700px) {
+@media (max-width: 970px) {
     .container-projectskill {
+        display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
 
     }

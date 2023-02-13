@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 :root {
@@ -16,6 +17,7 @@ body {
     background: var(--bg-black);
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
+    color: var(--white-text);
 }
 
 html {
@@ -24,22 +26,23 @@ html {
 
 .container {
     width: 60%;
-    height: 92em;
     margin: auto;
     padding-top: 1em;
 }
 
 .profile {
     color: var(--white-text);
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: flex-end;
-    place-items: center;
-    margin-top: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3rem;
+    gap: 2rem;
+
 }
 
 .p-profile {
     color: var(--white-text);
+    font-size: 50px;
 }
 
 strong {
@@ -47,9 +50,11 @@ strong {
 }
 
 .about-me {
-    color: var(--color-text);
-    margin-top: -40px;
+    color: var(--white-text);
     text-align: center;
+    font-size: 35px;
+    padding: 35px;
+    font-weight: bolder;
 }
 
 p {
@@ -63,23 +68,10 @@ h1 {
     margin-bottom: 2em;
 }
 
-h2 {
-    color: var(--white-text);
-
-}
-
 .profile img {
     width: 200px;
     height: 200px;
     border-radius: 120px;
-}
-
-.container h2 {
-    font-size: 40px;
-}
-
-#projects {
-    margin-bottom: 3em;
 }
 
 .down-arrow {
@@ -93,32 +85,23 @@ h2 {
 .img-skills {
     margin-top: 30px;
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
+    gap: 3rem;
+    padding: 1em;
 }
 
 .img-skills img {
-    width: 5%;
+    width: 5rem;
     padding: 10px;
-}
-
-.box-cards {
-    display: flex;
 }
 
 /* Formulário */
 
-.container-form {
-    display: flex;
-    justify-content: center;
-    line-height: 3em;
-}
-
 form {
-    border: rgb(102, 102, 102);
-    width: 100%;
     color: var(--color-text);
     font-size: 17px;
     line-height: 2.5em;
+    padding-top: 15px;
 }
 
 label {
@@ -127,20 +110,16 @@ label {
 
 form input {
     display: block;
-    line-height: 20px;
-
-    width: 80%;
     font-size: 17px;
     border: none;
-    background-color: transparent;
     color: var(--color-text);
-    padding: 0px 0px 8px 0px;
+    padding-bottom: 10px ;
     background: none;
     border: none;
     border-bottom: 1px solid var(--color-text);
     outline: none;
-    margin-bottom: 1em;
-    text-align: start;
+    margin-bottom: 1rem;
+    width:20rem;
 }
 
 form input:hover {
@@ -150,20 +129,20 @@ form input:hover {
 
 .form-textarea {
     display: block;
-
     font-size: 17px;
-    width: 77%;
     color: var(--bg-header);
     padding: 8px;
     border: none;
     outline: none;
     font-family: Arial, Helvetica, sans-serif;
     border-radius: 5px;
+    width: 20rem;
 }
 
 .btn-form {
     margin-top: 20px;
-    width: 80%;
+    width: 20rem;
+
     height: 40px;
     border-radius: 5px;
     border: solid 1px var(--green-text);
@@ -184,109 +163,63 @@ form input:hover {
     justify-content: space-between;
     align-items: center;
     margin-top: 10px;
-    width: 80%;
+    width: 20rem;
 }
 
-.svg-contacts {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-
-
-
-
-
-
-/* 
-
-
-.box-form input {
-    color: var(--color-text);
-    font-size: 17px;
-    padding: 5px 100px 10px 10px;
-    background: none;
-    border: none;
-    width: 90%;
-    border-bottom: 1px solid var(--color-text);
-    outline: none;
-    margin-bottom: 1em;
-    text-align: start;
-    
-}
-
-.box-form input:hover {
-    border-bottom: 1px solid var(--green-text);
-    color: var(--white-text);}
-
-
-
-form textarea { 
-    color: var(--white-text);
-    font-size: 17px;
-    color: var(--color-text);
-    padding: 5px;
-    margin-top: 1em;
-    width: 90%;
-    height: 10em;
-    background: none;
-    border: none;
-    outline: 1px solid var(--color-text);
-} 
-
- form textarea:hover {
-    outline: 1px solid var(--green-text);
-    color: var(--white-text);
-}
-
-.btn-form {
-    width: 92%;
-    height: 3em;
-    border: none;
-    font-size: 17px;
-    color: var(--white-text);
-    background-color: var(--green-text);
-}
-
-@media (max-width: 700px) {
-
-    .global {
-        max-width: 700px;
-
+@media (max-width: 625px) {
+    .p-profile {
+        text-align: center; 
     }
+}
 
-    .container {
-        width: 90%;
-        height: 105em;
-        margin: auto;
-    }
-
-    h2 {
-        color: var(--white-text);
-        text-align: center;
-    }
-
+@media (max-width: 625px) {
     .profile {
-        color: var(--white-text);
-        display: block;
-        margin-top: 5em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .profile img {
-        width: 200px;
-        height: 200px;
-        border-radius: 120px;
-        margin-left: 33%;
+        margin-top: 25px;
+    }
+}
+
+@media (max-width: 970px) {
+    .img-skills {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .img-skills img {
-        width: 15%;
+        width: 8rem;
         padding: 10px;
     }
+}
 
-    .box-cards {
-        display: block;
+@media (max-width: 625px) {
+    
+    h2 {
+        text-align: center;
+    }
+    
+    p {
+        text-align: center;
     }
 
-} */
+    #contacts {
+        text-align: center;
+    }
+
+    input {
+        text-align: center;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

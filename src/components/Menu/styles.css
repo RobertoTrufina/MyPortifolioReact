@@ -26,3 +26,9 @@
     text-decoration: none;
     color: var(--white-text);
 }
+
+@media (max-width: 625px) {
+    .btn-header {
+        padding: 8px 30px;
+    }
+}

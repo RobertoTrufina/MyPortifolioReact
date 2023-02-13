@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import Menu from '../../components/Menu'
 
 import bootstrap from '../../imgs/bootstrap.png'
-import contacts from '../../imgs/contacts.svg'
+
 import css from '../../imgs/css.png'
 import facebook from '../../imgs/facebook.svg'
 import github from '../../imgs/github.svg'
@@ -54,7 +54,7 @@ export default function Home() {
         <>
             <Menu />
             <main className='container' id='about'>
-                <section >
+                <section  >
                     <div className='profile'>
                         <h2 >
                             <p className='p-profile'>Hello, I am <strong>Roberto</strong></p>
@@ -63,11 +63,11 @@ export default function Home() {
                         <img src="https://avatars.githubusercontent.com/u/100736661?v=4" />
                     </div>
 
-                    <h1>About me</h1>
-                    <p className='about-me'>
+                    <p className='about-me'>About me</p>
+                    <p>
                         I currently live in Caucaia-Ce, I love technology and I have a lot of curiosity and interest in the development area to create projects and solve problems.
                     </p>
-
+                    <br />
                     <h2><strong>Skills</strong> and tools</h2>
                     <br />
                     <p>For a more detailed overviw, please fell free to check the tools that were used on a per-project basis.</p>
@@ -111,7 +111,7 @@ export default function Home() {
                         Get in touch
                         either by email or through may social media.
                     </p>
-                    <div className='svg-contacts'>
+                    <div className='jpg-contacts'>
                         <form onSubmit={sendEmail}>
                             <label>Nome</label>
                             <input
@@ -154,8 +154,10 @@ export default function Home() {
                                     <img src={facebook} />
                                 </a>
                             </div>
+
                         </form>
-                        <img src={contacts} />
+                        {/* <img src={contactus} className="contact-us" /> */}
+                        {/* <img src={contacts} /> */}
                     </div>
 
                 </section>
